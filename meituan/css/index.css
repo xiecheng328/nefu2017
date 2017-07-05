@@ -28,8 +28,10 @@
     border-radius: 0.06rem;
     outline: none;
     border: 0;
-    background: #05a494;
-    text-indent: 0.2rem;
+    background: #05a494 url(../img/magnify.png) no-repeat 0.1rem center;
+    -webkit-background-size: 0.32rem 0.32rem;
+    background-size: 0.32rem 0.32rem;
+    text-indent: 0.5rem;
     color: #fff;
 }
 #search input::-webkit-input-placeholder{/* 伪元素选择器 */
