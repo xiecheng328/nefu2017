@@ -7,6 +7,7 @@
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 1;
 }
 #city{
     width: 1.2rem;
@@ -191,6 +192,7 @@
     padding: 0;
     text-shadow: none;
     margin-right: 0.3rem;
+    font-size: .28rem;
 }
 
 
