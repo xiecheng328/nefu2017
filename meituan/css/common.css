@@ -19,6 +19,9 @@ body{
     font-size: 0.28rem;
     background-color: #f0efed;
 }
+.ui-content{
+    padding: 0;
+}
 
 
 
