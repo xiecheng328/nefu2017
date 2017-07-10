@@ -1,7 +1,7 @@
 /**
  * Created by xiecheng on 2017/7/6.
  */
-$(function(){//文档就绪函数
+$(document).on("pageinit",function(event){
     var $guideUl = $("#guide ul");
     var $navSpan = $("#nav span");
     //click tap
@@ -9,7 +9,7 @@ $(function(){//文档就绪函数
         swipeGuide($(this).index());
     });
     $guideUl.on("swipeleft", function(){
-       swipeGuide(1);
+        swipeGuide(1);
     }).on("swiperight", function(){
         swipeGuide(0);
     });
@@ -29,29 +29,20 @@ $(function(){//文档就绪函数
         });
     });
 
+    $("#menu li").on("tap", function(){
+        location.href = "detail.html";
+    });
+
+
+
     function swipeGuide(index){
         $navSpan.eq(index).addClass("active").siblings().removeClass("active");
         $guideUl.css({
             left: -index * $guideUl.width() / 2
         });
     }
-
-
-
-
-    /*oTop.onclick = function(){
-        var timer = setInterval(function(){
-            var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-            window.scrollTo(0, scrollTop-=50);
-            if(scrollTop <= 0){
-                clearInterval(timer);
-            }
-        }, 100);
-    };*/
-
-
-
 });
+
 
 /*$(document).ready(function(){
 
