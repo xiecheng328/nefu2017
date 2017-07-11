@@ -197,7 +197,7 @@
 }
 #combo h3{
     border-bottom: 1px solid #ccc;
-    padding-bottom: 0.2rem;
+    padding: 0.2rem 0;
 }
 #combo .discount-coupon{
     border-bottom: 1px solid #ccc;
@@ -221,7 +221,97 @@
     list-style: disc;
     margin-top: 0.1rem;
 }
+#notice{
+    padding: 0 0.2rem;
+}
+#notice h3{
+    border-bottom: 1px solid #ccc;
+    padding: 0.2rem 0;
+}
+#notice dt{
+    color: #ff9c08;
+    margin-top: 0.2rem;
+}
+#notice dd{
+    margin-top: 0.1rem;
+    margin-left: 0.1rem;
+}
+#notice ul{
+    padding-left: 0.4rem;
+}
+#notice li{
+    list-style: disc;
+    margin-top: 0.1rem;
+}
 
+#evaluate{
+    padding: 0 0.2rem;
+    margin-top: 0.3rem;
+}
+#evaluate .evaluate-title{
+    height: 0.7rem;
+    border-bottom: 1px solid #ccc;
+}
+#evaluate .evaluate-title .star img{
+    width: 0.32rem;
+    height: 0.32rem;
+}
+#evaluate h3{
+    float: left;
+}
+#evaluate .star{
+    float: right;
+}
+#evaluate .item{
+    padding-top: 0.2rem;
+    border-bottom: 1px solid #ccc;
+}
+#evaluate .item-title .header{
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+    float: left;
+}
+#evaluate .item-title .header img{
+    width: 0.8rem;
+    height: 0.8rem;
+}
+#evaluate .item-title .desc{
+    float: left;
+    margin-top: 0.1rem;
+    margin-left: 0.3rem;
+}
+#evaluate .item-title .name{
+    font-size: 0.24rem;
+    color: #666;
+}
+#evaluate .item-title .desc img{
+    width: 0.28rem;
+    height: 0.28rem;
+}
+#evaluate .item-title .date{
+    font-size: .24rem;
+}
+#evaluate .item-content{
+    clear: both;
+    line-height: 1.5;
+    padding-top: 0.2rem;
+}
+#evaluate .item-img{
+    margin: 0.2rem 0;
+}
+#evaluate .item-img img{
+    width: 1.1rem;
+    height: 1.1rem;
+    float: left;
+    margin-right: 0.1rem;
+}
+#evaluate .earnest{
+    width: 1rem;
+    height: 1rem;
+    float: right;
+}
 
 
 
