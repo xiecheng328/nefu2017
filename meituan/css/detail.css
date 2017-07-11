@@ -121,9 +121,6 @@
     float: right;
     margin-right: 0.2rem;
 }
-#type{
-    height: 2.7rem;
-}
 #type span{
     color: #999;
     border: 1px solid #999;
@@ -136,6 +133,9 @@
 #type span.hot{
     color: #ff9712;
     border: 1px solid #ff9712;
+}
+#inform{
+    margin-top: 0.3rem;
 }
 #inform h3{
     padding-bottom: 0.3rem;
@@ -280,12 +280,13 @@
 }
 #evaluate .item-title .desc{
     float: left;
-    margin-top: 0.1rem;
+    margin-top: 0.05rem;
     margin-left: 0.3rem;
 }
 #evaluate .item-title .name{
     font-size: 0.24rem;
     color: #666;
+    margin-bottom: 0.05rem;
 }
 #evaluate .item-title .desc img{
     width: 0.28rem;
@@ -293,6 +294,7 @@
 }
 #evaluate .item-title .date{
     font-size: .24rem;
+    margin-left: 0.2rem;
 }
 #evaluate .item-content{
     clear: both;
