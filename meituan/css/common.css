@@ -22,6 +22,9 @@ body{
 .ui-content{
     padding: 0;
 }
+.ui-bar-a, .ui-page-theme-a .ui-bar-inherit, html .ui-bar-a .ui-bar-inherit, html .ui-body-a .ui-bar-inherit, html body .ui-group-theme-a .ui-bar-inherit{
+    text-shadow: none;
+}
 
 
 
