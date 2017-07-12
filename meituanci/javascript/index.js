@@ -34,7 +34,7 @@ $(document).on("pageinit",function(event){
     });
 
     $("#login").on("tap", function(){
-        location.href = "welcome/login_page";
+        location.href = "user/login_page";
     });
 
 

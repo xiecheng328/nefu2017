@@ -3,11 +3,11 @@
  */
 $(document).on("pageinit", function(){
     $("#register_page").on("tap", function(){
-        location.href = "welcome/register_page";
+        location.href = "user/register_page";
     });
 
     $("#login_page").on("tap", function(){
-        location.href = "welcome/login_page";
+        location.href = "user/login_page";
     });
 
 });

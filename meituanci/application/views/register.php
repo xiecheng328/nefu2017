@@ -22,6 +22,7 @@
     <div id="header">
         注册
     </div>
+    <?php echo validation_errors(); ?>
     <form method="post" action="user/register" data-ajax="false" id="login-form">
         <div class="ui-field-contain">
             <label for="username">用户名:</label>
