@@ -19,7 +19,7 @@ class Welcome extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index()
-	{
+    {
 		$this->load->view('index');
 	}
 
@@ -45,5 +45,10 @@ class Welcome extends CI_Controller {
         } else {
             echo "登录失败";
         }
+    }
+
+    public function register_page()
+    {
+        $this -> load -> view("register");
     }
 }
