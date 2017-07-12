@@ -14,6 +14,7 @@
     <script src="javascript/jquery-1.12.4.js"></script>
     <script src="javascript/index.js"></script>
     <script src="javascript/login.js"></script>
+    <script src="javascript/register.js"></script>
     <script src="javascript/jquery.mobile-1.4.5.js"></script>
     <title>注册</title>
 </head>
