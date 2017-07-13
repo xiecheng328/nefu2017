@@ -24,7 +24,6 @@ class User_model extends CI_Model
             'username' => $username,
             'password' => $password
         );
-
         $this->db->insert('t_user', $data);
         return $this->db->affected_rows();
     }
