@@ -37,6 +37,13 @@ $(document).on("pageinit",function(event){
         location.href = "user/login_page";
     });
 
+    $("#user-detail").on("tap", function(){
+        location.href = "user/user_detail";
+    });
+
+    $("#logout").on("tap", function(){
+        location.href = "user/logout";
+    });
 
 
     function swipeGuide(index){

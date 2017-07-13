@@ -70,8 +70,9 @@ class User extends CI_Controller {
         $userinfo = $this->session->userdata('userinfo');;
         $user_id = $userinfo -> user_id;
         $order_list = $this -> order_model -> get_order_by_user_id($user_id);
-        var_dump($order_list);
-        die();
+        $this->load->view('user_detail', array(
+            "order_list" => $order_list
+        ));
     }
 
 }

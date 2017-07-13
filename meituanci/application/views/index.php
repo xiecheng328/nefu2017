@@ -29,8 +29,8 @@
 <!--            <a href="#popupMenu" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a">Actions...</a>-->
             <div data-role="popup" id="popupMenu" data-theme="a">
                 <ul data-role="listview" data-inset="true" style="min-width:2rem;">
-                    <li><a href="<?php echo site_url(); ?>user/user_detail">个人信息</a></li>
-                    <li><a href="<?php echo site_url(); ?>user/logout">退出登录</a></li>
+                    <li><a id="user-detail" href="javascript:;">个人信息</a></li>
+                    <li><a id="logout" href="javascript:;">退出登录</a></li>
                 </ul>
             </div>
 
