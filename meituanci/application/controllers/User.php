@@ -62,18 +62,16 @@ class User extends CI_Controller {
     {
         $this->session->unset_userdata('userinfo');
 //        $this->session->sess_destroy();
-        redirect("welcome/index", "refresh");
+            redirect("welcome");
     }
 
     public function user_detail()
     {
         $userinfo = $this->session->userdata('userinfo');;
-        var_dump($userinfo);
-        die();
         $user_id = $userinfo -> user_id;
         $order_list = $this -> order_model -> get_order_by_user_id($user_id);
         var_dump($order_list);
-
+        die();
     }
 
 }
