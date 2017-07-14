@@ -11,7 +11,7 @@
  Target Server Version : 100113
  File Encoding         : utf-8
 
- Date: 07/14/2017 09:17:43 AM
+ Date: 07/14/2017 10:43:43 AM
 */
 
 SET NAMES utf8mb4;
@@ -38,7 +38,7 @@ CREATE TABLE `t_order` (
 --  Records of `t_order`
 -- ----------------------------
 BEGIN;
-INSERT INTO `t_order` VALUES ('1', '1', '1', '5', '2'), ('2', '1', '2', '10', '3'), ('3', '1', '3', '8', '2');
+INSERT INTO `t_order` VALUES ('1', '1', '1', '5', '2'), ('2', '1', '1', '10', '3'), ('3', '1', '3', '8', '2');
 COMMIT;
 
 -- ----------------------------
@@ -51,6 +51,7 @@ CREATE TABLE `t_product` (
   `price` varchar(10) CHARACTER SET utf8 DEFAULT NULL,
   `description` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `discount_price` varchar(10) COLLATE utf8_bin DEFAULT NULL,
+  `img` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   PRIMARY KEY (`product_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
@@ -58,7 +59,7 @@ CREATE TABLE `t_product` (
 --  Records of `t_product`
 -- ----------------------------
 BEGIN;
-INSERT INTO `t_product` VALUES ('1', 'xianyuxian', '8', '[11店通用]10元代金券1份', '6'), ('2', 'KFC', '15', '[12店通用]10元代金券1份', '10'), ('3', '麦当劳', '2', '[13店通用]10元代金券1份', '1');
+INSERT INTO `t_product` VALUES ('1', 'xianyuxian', '8', '[11店通用]10元代金券1份', '6', 'img/xianyuxian.jpg'), ('2', 'KFC', '15', '[12店通用]10元代金券1份', '10', 'img/xianyuxian.jpg'), ('3', '麦当劳', '2', '[13店通用]10元代金券1份', '1', 'img/xianyuxian.jpg');
 COMMIT;
 
 -- ----------------------------

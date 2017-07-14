@@ -159,14 +159,14 @@
                 <ul id="menu">
                     <?php foreach ($result as $product) {?>
                         <li>
-                            <img src="img/xianyuxian.jpg" alt="" class="brand">
+                            <img src="<?php echo $product->img?>" alt="" class="brand">
                             <div class="detail">
                                 <p class="detail-name"><?php echo $product->product_name?></p>
                                 <p class="detail-desc"><?php echo $product->description?></p>
                                 <div>
                                     <span class="price"><?php echo $product->discount_price ?>元</span>
                                     <span>门市价：<?php echo $product->price?>元</span>
-                                    <span class="sold">已售147053</span>
+                                    <span class="sold">已售<?php echo $product->num?></span>
                                 </div>
                             </div>
                         </li>
