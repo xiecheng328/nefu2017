@@ -3,17 +3,18 @@
 
  Source Server         : localhost
  Source Server Type    : MySQL
- Source Server Version : 100124
+ Source Server Version : 100113
  Source Host           : localhost
  Source Database       : meituan
 
  Target Server Type    : MySQL
- Target Server Version : 100124
+ Target Server Version : 100113
  File Encoding         : utf-8
 
- Date: 07/13/2017 15:47:56 PM
+ Date: 07/14/2017 09:17:43 AM
 */
 
+SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
 -- ----------------------------
@@ -48,6 +49,8 @@ CREATE TABLE `t_product` (
   `product_id` int(11) NOT NULL AUTO_INCREMENT,
   `product_name` varchar(255) COLLATE utf8_bin DEFAULT NULL,
   `price` varchar(10) CHARACTER SET utf8 DEFAULT NULL,
+  `description` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `discount_price` varchar(10) COLLATE utf8_bin DEFAULT NULL,
   PRIMARY KEY (`product_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
@@ -55,7 +58,7 @@ CREATE TABLE `t_product` (
 --  Records of `t_product`
 -- ----------------------------
 BEGIN;
-INSERT INTO `t_product` VALUES ('1', 'xianyuxian', '8'), ('2', 'KFC', '15'), ('3', '麦当劳', '2');
+INSERT INTO `t_product` VALUES ('1', 'xianyuxian', '8', '[11店通用]10元代金券1份', '6'), ('2', 'KFC', '15', '[12店通用]10元代金券1份', '10'), ('3', '麦当劳', '2', '[13店通用]10元代金券1份', '1');
 COMMIT;
 
 -- ----------------------------
