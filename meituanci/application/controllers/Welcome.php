@@ -12,17 +12,26 @@ class Welcome extends CI_Controller {
     {
         $results = $this->product_model->get_product();
 
-        foreach ($results as $product){
-            //在order表通过product_id查询记录条数
-            $num = $this->order_model->get_count_by_product_id($product->product_id);
-//            if($num->num == null){
-//                $product->num = 0;
-//            }else{
-//                $product->num = $num->num;
-//            }
-            $product->num = $num->num == null?0:$num->num;
+        //[1,2,3];
+        // like
+        //[5,0,3]
+//
+//        foreach ($results as $product){
+//            $product->num = $product->num == null?0:$product->num;
+//        }
 
-        }
+//
+//        foreach ($results as $product){
+//            //在order表通过product_id查询记录条数
+//            $num = $this->order_model->get_count_by_product_id($product->product_id);
+////            if($num->num == null){
+////                $product->num = 0;
+////            }else{
+////                $product->num = $num->num;
+////            }
+//            $product->num = $num->num == null?0:$num->num;
+//
+//        }
 
 
         //var_dump($results[0]->product_id);
