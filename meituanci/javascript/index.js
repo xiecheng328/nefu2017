@@ -30,7 +30,8 @@ $(document).on("pageinit",function(event){
     });
 
     $("#menu li").on("tap", function(){
-        location.href = "welcome/detail";
+        var productId = $(this).children('.product-id').val();
+        location.href = "welcome/detail/"+productId;
     });
 
     $("#login").on("tap", function(){
