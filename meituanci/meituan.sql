@@ -11,7 +11,7 @@
  Target Server Version : 100113
  File Encoding         : utf-8
 
- Date: 07/14/2017 16:20:33 PM
+ Date: 07/17/2017 09:13:02 AM
 */
 
 SET NAMES utf8mb4;
@@ -34,6 +34,25 @@ CREATE TABLE `t_business` (
 -- ----------------------------
 BEGIN;
 INSERT INTO `t_business` VALUES ('1', '鲜芋仙', '道外区东直路118号百盛购物中心太平桥店1层', '0451-88888888'), ('2', '麦当劳', '东北林业大学', '010-666');
+COMMIT;
+
+-- ----------------------------
+--  Table structure for `t_collect`
+-- ----------------------------
+DROP TABLE IF EXISTS `t_collect`;
+CREATE TABLE `t_collect` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `product_id` int(11) DEFAULT NULL,
+  `is_delete` int(1) DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+--  Records of `t_collect`
+-- ----------------------------
+BEGIN;
+INSERT INTO `t_collect` VALUES ('6', '1', '2', '0');
 COMMIT;
 
 -- ----------------------------
