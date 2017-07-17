@@ -30,4 +30,16 @@ class Product_model extends CI_Model
         return $this->db->get()->row();
 
     }
+    public function add_collect($user_id,$product_id){
+
+        $data = array(
+            'user_id' => $user_id,
+            'product_id' => $product_id
+        );
+        $this->db->insert('t_collect', $data);
+        return $this->db->affected_rows();
+
+    }
+
+
 }

@@ -26,7 +26,8 @@
             团购详情
         </div>
         <div id="collect">
-            <span>收藏</span>
+            <input type="hidden" id="hidden-product-id" value="<?php echo $row->product_id?>">
+            <span id="collect-btn">收藏</span>
             <span>导航</span>
         </div>
     </div>
