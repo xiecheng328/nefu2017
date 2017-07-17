@@ -49,4 +49,12 @@ class Product_model extends CI_Model
         return $this->db->query($sql)->row();
     }
 
+    public function cancel_collect($user_id,$product_id){
+        $this->db->set('is_delete', 1);
+        $this->db->where('user_id', $user_id);
+        $this->db->where('product_id', $product_id);
+        $this->db->update('t_collect');
+        return $this->db->affected_rows();
+    }
+
 }
