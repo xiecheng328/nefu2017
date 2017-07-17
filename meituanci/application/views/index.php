@@ -159,6 +159,7 @@
                 <ul id="menu">
                     <?php foreach ($result as $product) {?>
                         <li>
+                            <input type="hidden" class='product-id' value="<?php echo $product->product_id?>">
                             <img src="<?php echo $product->img?>" alt="" class="brand">
                             <div class="detail">
                                 <p class="detail-name"><?php echo $product->product_name?></p>
