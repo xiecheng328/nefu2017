@@ -46,7 +46,7 @@ class Product_model extends CI_Model
 //        return $this->db->get()->row();
 
         $sql = "select * from t_collect where user_id=$user_id and product_id =$product_id and is_delete = 0";
-        $this->db->query($sql)->row();
+        return $this->db->query($sql)->row();
     }
 
 }

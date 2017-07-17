@@ -54,16 +54,17 @@ class Welcome extends CI_Controller {
             //已登录
             $user_id = $userinfo -> user_id;
             $collect = $this->product_model->get_collect($user_id,$product_id);
-            if(isset($collect)){
+            var_dump($user_id,$product_id);
+            if(($collect == null)){
                 //未收藏 显示收藏
                 $row->collect = '收藏';
             }else{
                 //已收藏 显示取消
                 $row->collect = '取消';
+//                var_dump("aaaa");
             }
         }
 //        $user_id = $userinfo -> user_id;
-
 
         $this -> load -> view('detail',array('row'=>$row));
     }

@@ -27,7 +27,7 @@
         </div>
         <div id="collect">
             <input type="hidden" id="hidden-product-id" value="<?php echo $row->product_id?>">
-            <span id="collect-btn"><?php echo $row->collect?></span>
+            <span id="collect-btn" class="<?php echo $row->collect=='取消'?'active':''?>"><?php echo $row->collect?></span>
             <span>导航</span>
         </div>
     </div>
