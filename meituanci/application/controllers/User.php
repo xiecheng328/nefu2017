@@ -49,6 +49,15 @@ class User extends CI_Controller {
         }
 	}
 
+    public function check_logined(){
+        $userinfo = $this->session->userdata('userinfo');
+        if(empty($userinfo)){
+            echo 'no';
+        }else{
+            echo "yes";
+        }
+    }
+
 	public function register()
     {
         $username = $this -> input -> post("username");
@@ -68,7 +77,7 @@ class User extends CI_Controller {
 
     public function user_detail()
     {
-        $userinfo = $this->session->userdata('userinfo');;
+        $userinfo = $this->session->userdata('userinfo');
         $user_id = $userinfo -> user_id;
         $order_list = $this -> order_model -> get_order_by_user_id($user_id);
         $this->load->view('user_detail', array(
@@ -78,10 +87,14 @@ class User extends CI_Controller {
 
     public function collect(){
         $product_id = $this->input->get('productId');
-        $userinfo = $this->session->userdata('userinfo');;
+        $userinfo = $this->session->userdata('userinfo');
         $user_id = $userinfo -> user_id;
         $rows =  $this-> product_model -> add_collect($user_id,$product_id);
-        var_dump($rows);
+        if($rows>0){
+            echo 'success';
+        }else{
+            echo 'fail';
+        }
     }
 
 }
