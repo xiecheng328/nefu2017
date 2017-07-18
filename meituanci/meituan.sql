@@ -11,7 +11,7 @@
  Target Server Version : 100113
  File Encoding         : utf-8
 
- Date: 07/17/2017 09:13:02 AM
+ Date: 07/18/2017 16:27:56 PM
 */
 
 SET NAMES utf8mb4;
@@ -46,13 +46,52 @@ CREATE TABLE `t_collect` (
   `product_id` int(11) DEFAULT NULL,
   `is_delete` int(1) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 --  Records of `t_collect`
 -- ----------------------------
 BEGIN;
-INSERT INTO `t_collect` VALUES ('6', '1', '2', '0');
+INSERT INTO `t_collect` VALUES ('12', '1', '1', '1'), ('14', '1', '1', '1'), ('15', '1', '1', '1'), ('16', '1', '1', '1'), ('17', '1', '1', '1'), ('18', '1', '1', '0');
+COMMIT;
+
+-- ----------------------------
+--  Table structure for `t_comment`
+-- ----------------------------
+DROP TABLE IF EXISTS `t_comment`;
+CREATE TABLE `t_comment` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `product_id` int(11) DEFAULT NULL,
+  `content` varchar(255) CHARACTER SET utf8 DEFAULT NULL,
+  `time` datetime DEFAULT NULL,
+  `score` int(1) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+--  Records of `t_comment`
+-- ----------------------------
+BEGIN;
+INSERT INTO `t_comment` VALUES ('1', '1', '1', ' 好111111天吃太美好了 啊啊啊啊啊 上瘾上瘾 甜甜甜 甜品真是太好吃 冬天吃热的 夏天吃凉的', '2017-07-13 16:03:19', '4'), ('2', '2', '1', '好22222夏天吃太美好了 啊啊啊啊啊 上瘾上瘾 甜甜甜 甜品真是太好吃 冬天吃热的 夏天吃凉的', '2017-07-18 16:04:18', '5'), ('3', '1', '2', '不好吃不好吃 夏天吃太美好了 啊啊啊啊啊 上瘾上瘾 甜甜甜 甜品真是太好吃 冬天吃热的 夏天吃凉的', '2017-07-18 16:04:29', '1');
+COMMIT;
+
+-- ----------------------------
+--  Table structure for `t_comment_img`
+-- ----------------------------
+DROP TABLE IF EXISTS `t_comment_img`;
+CREATE TABLE `t_comment_img` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `path` varchar(255) DEFAULT NULL,
+  `comment_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+-- ----------------------------
+--  Records of `t_comment_img`
+-- ----------------------------
+BEGIN;
+INSERT INTO `t_comment_img` VALUES ('1', 'img/item1.jpg', '1'), ('2', 'img/item2.jpg', '1'), ('3', 'img/item1.jpg', '2');
 COMMIT;
 
 -- ----------------------------
@@ -70,13 +109,13 @@ CREATE TABLE `t_order` (
   KEY `product_id` (`product_id`),
   CONSTRAINT `t_order_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `t_user` (`user_id`),
   CONSTRAINT `t_order_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `t_product` (`product_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- ----------------------------
 --  Records of `t_order`
 -- ----------------------------
 BEGIN;
-INSERT INTO `t_order` VALUES ('1', '1', '1', '5', '2'), ('2', '1', '1', '10', '3'), ('3', '1', '3', '8', '2');
+INSERT INTO `t_order` VALUES ('1', '1', '1', '5', '2'), ('2', '1', '2', '10', '3'), ('3', '1', '1', '8', '2'), ('7', '1', '2', '19.9', '1'), ('8', '1', '2', '19.9', '4'), ('10', '1', '2', '10', '2'), ('11', '1', '2', '10', '3');
 COMMIT;
 
 -- ----------------------------
