@@ -7,6 +7,19 @@ $(document).on("pageinit", function(){
         location.href = "welcome/index";
     });
 
+    $('.buy').on('tap',function(){
+        // console.log(111);
+        var product_id = $('#hidden-product-id').val();
+        $.get('user/check_logined',{},function(data){
+            if(data == 'yes'){
+                location.href = 'welcome/submit_order?productId='+product_id;
+            }else{
+                location.href = 'user/login_page';
+            }
+        },'text');
+
+    });
+
     $('#collect-btn').on('tap',function(){
         //将收藏信息插入数据库
         // user_id  product_id
