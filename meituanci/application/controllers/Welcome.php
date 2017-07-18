@@ -42,6 +42,11 @@ class Welcome extends CI_Controller {
 	public function detail($product_id)
     {
         $row = $this->product_model->get_product_by_id($product_id);
+        $results = $this->product_model->get_comment($product_id);
+        foreach ($results as $res){
+            $imgs = $this->product_model->get_img($res->id);
+            $res->imgs = $imgs;
+        }
 
         $userinfo = $this->session->userdata('userinfo');
         if(empty($userinfo)){
@@ -60,7 +65,7 @@ class Welcome extends CI_Controller {
             }
         }
 
-        $this -> load -> view('detail',array('row'=>$row));
+        $this -> load -> view('detail',array('row'=>$row,'results'=>$results));
     }
 
     public function success()
