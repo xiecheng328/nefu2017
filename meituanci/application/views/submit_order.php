@@ -26,13 +26,13 @@
         </div>
     </div>
     <div role="main" class="ui-content" id="content">
-        <input type="hidden" id='product-id' value="<?php echo $productId?>">
+        <input type="hidden" id='product-id' value="<?php echo $product->product_id?>">
         <div id="title">
-            鲜芋仙
+            <?php echo $product->product_name?>
         </div>
         <div class="order-form">
             单价：
-            <span><i class="price">19.9</i>元</span>
+            <span><i class="price"><?php echo $product->discount_price?></i>元</span>
         </div>
         <div class="order-form">
             数量：
@@ -45,7 +45,7 @@
         <div class="order-form">
             总价：
             <span>
-                <i class="total-price">19.9</i>元
+                <i class="total-price"><?php echo $product->discount_price?></i>元
             </span>
         </div>
         <button id="submit-btn">提交订单</button>

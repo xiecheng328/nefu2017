@@ -70,8 +70,11 @@ class Welcome extends CI_Controller {
 
     public function submit_order(){
         $product_id = $this->input->get('productId');
+
+        $product = $this->product_model->get_product_by_id($product_id);
+
 //        var_dump($product_id);
-        $this -> load -> view('submit_order',array('productId'=>$product_id));
+        $this -> load -> view('submit_order',array('product'=>$product));
     }
 
     public function add_order(){
