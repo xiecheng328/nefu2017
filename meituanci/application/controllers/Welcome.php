@@ -68,4 +68,25 @@ class Welcome extends CI_Controller {
         $this -> load -> view('success');
     }
 
+    public function submit_order(){
+        $product_id = $this->input->get('productId');
+//        var_dump($product_id);
+        $this -> load -> view('submit_order',array('productId'=>$product_id));
+    }
+
+    public function add_order(){
+        $product_id = $this->input->get('productId');
+        $num = $this->input->get('num');
+        $price = $this->input->get('price');
+        $userinfo = $this->session->userdata('userinfo');
+        $user_id = $userinfo->user_id;
+
+        $rows = $this->order_model->add_order($user_id,$product_id,$price,$num);
+        if($rows>0){
+            echo 'success';
+        }else{
+            echo 'fail';
+        }
+    }
+
 }
