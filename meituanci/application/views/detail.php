@@ -145,11 +145,16 @@
                     </div>
                     <div class="desc">
                         <p class="name"><?php echo $comment->username?></p>
-                        <img src="img/star-yellow.png" alt="">
-                        <img src="img/star-yellow.png" alt="">
-                        <img src="img/star-yellow.png" alt="">
-                        <img src="img/star-yellow.png" alt="">
-                        <img src="img/star-gray.png" alt="">
+<!--                        <img src="img/star-yellow.png" alt="">-->
+<!--                        <img src="img/star-yellow.png" alt="">-->
+<!--                        <img src="img/star-yellow.png" alt="">-->
+<!--                        <img src="img/star-yellow.png" alt="">-->
+<!--                        <img src="img/star-gray.png" alt="">-->
+                        <div class="comment-score">
+                            <div style="width: <?php echo $comment->score * 20?>%">
+
+                            </div>
+                        </div>
                         <span class="date"><?php echo $comment->time?></span>
                     </div>
                     <img src="img/earnest.png" alt="" class="earnest">
